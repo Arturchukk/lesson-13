@@ -1,0 +1,172 @@
+@import url('../css/reset.css');
+body {
+	line-height: 1;
+	font-family: 'Lato';
+     color: #424551;
+     line-height: 160%;
+}
+/* ================================ */
+.wrapper{
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+    position: relative;
+}
+/* ================================ */
+
+.page {
+	flex: 1 1 auto;
+}
+/* ================================ */
+[class*="__container"]{
+	max-width: 1260px;
+	margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.header {
+    padding: 40px;
+}
+.header__animation {
+}
+.animation-header {
+}
+.animation-header__item {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(67, 67, 199);
+    animation-name: rotate;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    border-radius: 20px;
+}
+@keyframes rotate {
+    0% {
+              transform: translate(0px,0px);
+              border-radius: 0px;
+    }
+    20% {
+        transform: rotate(90deg);
+    }
+    80% {
+        background-color: blueviolet;
+    }
+    100% {
+        transform: translate(1000px,0px);
+        background-color: rgb(177, 200, 26);
+    }
+}
+
+.circle {
+    background: rgb(17, 158, 218);
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    -webkit-animation: circle 3s infinite;
+    animation: circle 3s infinite;
+    margin-bottom: 50px;
+    margin-right: 40px;
+  }
+  
+  @-webkit-keyframes circle {
+    0% {
+      -webkit-transform: scale(0.6, 0.6);
+      transform: scale(0.6, 0.6);
+    }
+    50% {
+      -webkit-transform: scale(1.0, 1.0);
+      transform: scale(1.0, 1.0);
+    }
+    100% {
+      -webkit-transform: scale(0.6, 0.6);
+      transform: scale(0.6, 0.6);
+    }
+  }
+  
+  @keyframes circle {
+    0% {
+      -webkit-transform: scale(0.6, 0.6);
+      transform: scale(0.5, 0.5)
+    }
+    50% {
+      -webkit-transform: scale(1.0, 1.0);
+      transform: scale(1.0, 1.0);
+    }
+    100% {
+      -webkit-transform: scale(0.6, 0.6);
+      transform: scale(0.6, 0.6);
+    }
+  }
+
+.car-image {
+    background: url('../img/1642150165_1-damion-club-p-fon-doroga-dlya-detei-1.jpg') no-repeat center top / cover;
+    min-height: 1000px;
+}
+.car {
+    width: 200px;
+	height: 100px;
+	background-color: #2f1ec6;
+	border-radius: 50px 50px 0 0;
+	position: relative;
+	animation: car-ride 7s linear forwards infinite;
+    top: 800px;
+    left: 0px;
+}
+.car__wheels {
+    position: absolute;
+	bottom: 20px;
+	width: 100%;
+	left: 0;
+}
+.car__wheel {
+    width: 40px;
+	height: 40px;
+	background-color: #666;
+	position: absolute;
+	border-radius: 50%;
+	outline: 5px dashed #000;
+	animation: wheels 8s linear  infinite;
+}
+.car__wheel:first-child{
+	left: 0;
+}
+.car__wheel:last-child {
+	right: 0;
+}
+
+@keyframes wheels{
+	0% {
+		transform: rotate(0deg);
+	}
+	20%{
+		transform: rotate(360deg);
+	}
+	80%{
+		transform: rotate(360deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+@keyframes car-ride {
+	0% {
+		transform: translate(-200%, 0px);
+	}
+	20%{
+		transform: translate(200px, 0px);
+	}
+	80%{
+		transform: translate(500px, 0px);
+	}
+	100% {
+		transform: translate(1500px, 0px);
+	}
+}
+
+.footer {
+}
